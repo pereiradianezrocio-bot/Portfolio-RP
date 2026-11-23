@@ -1,0 +1,597 @@
+
+:root{
+    font-family: "Space Grotesk", sans-serif;
+}
+* , *::before , *::after {
+  margin : 0;
+  padding : 0;
+  border : 0;
+  box-sizing : border-box;
+  vertical-align : baseline;
+}
+*::before , *::after {
+  display : block;
+}
+img , picture , video , iframe , figure , canvas {
+  max-width : 100%;
+  display : block;
+  width : 100%;
+  height : initial;
+  object-fit : cover;
+  object-position : center center;
+}
+a {
+  display : block;
+  text-decoration : none;
+  color : inherit;
+  font :  inherit;
+}
+p a {
+  display : inline;
+}
+li , menu, summary {
+  list-style-type : none;
+}
+ol {
+  counter-reset : revert;
+}
+h1 , h2 , h3 , h4 , h5 , h6 , p , span , a , strong , blockquote , i , b , u , em , pre , code , mark , del {
+  font :  inherit;
+  line-height :  1em;
+  text-decoration :  none;
+  color : inherit;
+  overflow-wrap : break-word;
+  text-wrap : pretty;
+}
+mark {
+  background-color : transparent;
+}
+blockquote::before , blockquote::after , q::before , q::after {
+  content : none;
+}
+form , input , textarea , select , button , label {
+  font :  inherit;
+  hyphens : auto;
+  background-color : transparent;
+  color : inherit;
+  display : block;
+  appearance : none;
+}
+fieldset {
+  border : none;
+}
+::placeholder {
+  color : unset;
+}
+button , label {
+  cursor : pointer;
+}
+table , tr , td , th , tbody , thead , tfoot {
+  border-collapse : collapse;
+  border-spacing : 0;
+  font : inherit;
+}
+svg {
+  width : 100%;
+  height : initial;
+  display : block;
+  fill : currentColor;
+}
+body {
+  min-height : 100vh;
+  line-height : 1.5em;
+  color : inherit;
+  hyphens : auto;
+  font-smooth : always;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing : grayscale;
+}
+
+.Header{
+    width: 100%;
+    background-color: white;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.25rem;
+    position: fixed;
+    z-index: 100;
+    /* Position fixed para que se quede en toda la web y z-index 100 para que este siempre superpuesto en profundidad a todas las etiquetas, puede ser 100 o 50, pero si ponemos 2 es mas facil que se superpongan por usar el zindex en otras */
+
+    .Header-logo{
+        /* En este creo que con JV quiero que cada vez que se haga clic suba arriba de la pagina */
+        width: 2.25rem;
+        min-height: 3.125rem;
+        max-width: 3.125rem;
+        .Header-img{
+           
+        }
+    }
+
+    .Header-menu{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2.5rem;
+    }
+
+    .Header-burger{
+      width: 1.5625rem;
+      display: none;
+      flex-flow: column nowrap;
+      justify-content: center;
+      gap: .3125rem;
+
+
+
+      .Header-line{
+        width: 1.5625rem;
+        min-height: .125rem;
+        background-color: black;
+      }
+      
+    }
+
+  @media screen and (max-width: 768px){
+    .Header-menu{
+      display: none;
+      }
+    .Header-burger{
+      display: flex;
+    }
+    /* El @media se pone en linea con el contenedor, fuera, o como un elemento mas? */
+    }
+    
+}
+
+.Hero{
+  width: 100%;
+  min-height: 100dvh;
+  /* dvh, porque es como vh pero en algunos navegadores se adapta para no consumir espacio que no le "pertenece" a la altura como la barra del navegador */
+  padding: 6rem 4rem;
+  /* Estas medidas de padding, segun gemini, son los aproximados en los que se suelen poner los padding a nivel de diseño editorial */
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+    .Hero-wrapper{
+      width: 100%;
+      max-width: 75rem;
+
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+
+        .Hero-Rocio{
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+          align-items: center;
+          gap: 3rem;
+
+            .Hero-img{
+              width: 20rem;
+              min-height: 20rem;
+              border: 2px solid black;
+
+              display: block;
+              /* display block en las imagenes porque estas por defecto son inline y si ponemos block se ajusta a la pagina y no a la imagen/contenido */
+              object-fit: contain;
+            }
+            .Hero-h2{
+
+            }
+        }
+    }
+      .Hero-description{
+        gap: 3rem;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+
+      }
+  @media  screen and (max-width: 1024px) {
+    padding: 5rem 2rem;
+
+    .Hero-wrapper{
+      gap: 2rem;
+
+      .Hero-Rocio{
+        gap: 2rem;
+
+        .Hero-img{
+          width: 16rem;
+          min-height: 16rem;
+        }
+
+        .Hero-h2{
+
+        }
+      }
+      .Hero-description{
+        gap: 1.75rem;
+
+      }
+    }
+    
+  }
+  @media screen and (max-width: 768px) {
+
+    .Hero-wrapper{
+      align-items: flex-start;
+
+      .Hero-Rocio{
+        flex-flow: column-reverse nowrap;
+        align-items: flex-start;
+
+        .Hero-img{
+          width: 20rem;
+        }
+      }
+  
+      .Hero-description{
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        gap: .625rem;
+
+      }
+    }
+    
+  }
+}
+
+.Aboutme{
+  width: 100%;
+  min-height: 100dvh;
+  /* dvh: para ocupar siempre el alto del monitor y que no ocupe mas espacio del que deberia */
+  padding: 6rem 4rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: clip;
+  /* se pone overflow en el eje x y en clip porque asi no deja que sobresalga por los lados, mirar apuntes cuaderno */
+
+  .Aboutme-wrapper{
+    width: 100%;
+    max-width: 72rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    /* justify content al center para que los buttons siempre esten a la misma distancia del cuaderno */
+    align-items: center;
+    gap: 1.875rem;
+    .Aboutme-button{
+      width: 3.125rem;
+      min-height: 3.125rem;
+      border: 2px solid black;
+      /* En el border usamos px o rem? */
+      flex-shrink: 0;
+      /* Flex-shrink 0 evita que el notebook aplaste a los buttons para ajustarse a la pantalla, mirar apuntes */
+    }
+    .Aboutme-notebook{
+      width: 100%;
+      max-width: 54rem;
+      min-height: 35rem;
+
+      position: relative;
+      .Notebook-pages{
+        width: 100%;
+        min-height: 100%;
+        background-color: black;
+        padding: 0.75rem;
+
+        display: flex;
+        flex-flow: row nowrap;
+        border: 1px solid white;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        .Notebook-page{
+          width: 50%;
+          min-height: 100%;
+          background-color: white;
+          border: 1px solid black;
+          object-fit: contain;
+          /* para que la imagen no se deforme */
+          overflow: hidden;
+        }
+    }
+  }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 5rem 2rem;
+    /* le bajamos el tamaño de espacio vacio para que se ajuste mejor */
+
+    .Aboutme-wrapper{
+      gap: 1.25rem;
+      /* pegamos asi los botones mas al cuaderno para que entren mejor */
+      .Aboutme-button{
+        width: 2.5rem;
+        min-height: 2.5rem;
+        /* hacemos los botones mas pequeños */
+      }
+
+      .Aboutme-notebook{
+        max-width: 36rem;
+        min-height: 23.5rem;
+        /* encogemos el ancho y alto del cuaderno */
+
+        .Notebook-pages{
+          padding: 0.5rem;
+        }
+      }
+
+    }
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    min-height: auto;
+    /* Auto (valor por referencia), asi elimina el 100dvh y mide los elementos que haya dentro, en este caso el notebook y los botones */
+    padding: 4rem 1.25rem;
+    /* hacemos los espacios de la etiqueta hacia fuera mas pequeños */
+
+    .Aboutme-wrapper{
+      position: relative;
+      padding: 0 0 3.75rem 0;
+
+      .Aboutme-notebook{
+        max-width: 24rem;
+        min-height: 15.5rem;
+        /* hacemos mas pequeño el cuaderno */
+
+        .Notebook-pages{
+          padding: .35rem;
+        }
+      }
+
+      .Aboutme-button{
+        width: 2.5rem;
+        min-height: 2.5rem;
+        /* hacemos los botones mas pequeños */
+        position: absolute;
+        bottom: 0;
+        /* hacemos position absolute para poner los dos buttons debajo del cuaderno y botton 0 para que se peguen debajo */
+      }
+      .Aboutme-button--left{
+        right: 50%;
+        margin: 0 .625rem 0 0;
+      }
+      .Aboutme-button--right{
+        left: 50%;
+        margin: 0 0 0 .625rem;
+      }
+    }
+    
+  }
+}
+
+.Projects{
+  width: 100%;
+  max-width: 75rem;
+  min-height: 100dvh;
+  margin: auto;
+  padding: 4rem 2rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: start;
+  .Projects-title{
+    margin: 0 0 1.25rem 0;
+
+  }
+  .Projects-wrapper{
+      width: 100%;
+      min-height: 15.625rem;
+      gap: 1.25rem;
+
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    
+      .Projects-columns{
+          position: relative;
+
+          .Projects-img{
+              width: 100%;
+              background-color: #313030;
+              padding: .3125rem;
+              border-radius: 1%;
+
+              display: block;
+
+              transition: all .5s ease;
+
+          }
+
+          .Projects-h3{
+              width: 100%;
+              min-height: 100%;
+              background-color: black;
+              padding: 20px;
+              border-radius: 1%;
+
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-between;
+              align-items: end;
+
+              /* este flex se le aplica al texto en h3, para que se coloque donde queramos, aunque no tenga una etiqueta como tal */
+
+              position: absolute;
+              top: 0;
+              left: 0;
+              /* top 0 y left 0 para anclar bien la etiqueta por arriba y la izquierda */
+
+              color: white;
+              font-size: 60px;
+              font-weight: 600;
+
+              opacity: 0%;
+              pointer-events: none;
+              transition: all .5s ease;
+          }
+
+          
+          &:hover .Projects-h3{
+              opacity: 70%;
+              pointer-events: auto;
+          }
+          /* & hace referencia a la etiqueta madre, por eso va dentro, en este caso es projects-columns, sino, tendriamos que ponerlo fuera de la etiqueta y escribirlo */
+
+      }
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 3rem 2rem;
+
+    .Projects-wrapper{
+      gap: 1rem;
+      /* menos espacio entre ellas */
+
+      .Projects-columns{
+        .Projects-h3{
+          font-size: 2.25rem;
+          padding: 1rem;
+        }
+      }
+    }
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 3rem 1.25rem;
+
+    .Projects-wrapper{
+      grid-template-columns: 1fr;
+
+      .Projects-columns{
+        .Projects-h3{
+          font-size: 1.75rem;
+          padding: 1rem;
+          opacity: 70%;
+          pointer-events: auto;
+
+          /* pointer events auto porque en moviles no hay raton, entonces no pueden hacer hover y no van a poder hacer clic, esto fue idea de gemini */
+        }
+      }
+    }
+    
+  }
+}
+
+.Contact{
+  width: 100%;
+  min-height: 100dvh;
+  background-color: black;
+  padding: 6rem 4rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  .Contact-wrapper{
+    width: 100%;
+    max-width: 75rem;
+    background-color: gray;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
+    gap: 2.5rem;
+
+
+    .Contact-title{
+    }
+    .Contact-text{
+    }
+    .Contact-info{
+      width: 100%;
+      margin: 1.5rem 0 0 0;
+
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      gap:2rem;
+
+
+      .Contact-socials{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1.5rem;
+
+        .Socials-links{
+          .Socials-logo{
+            width: 1.75rem;
+            min-height: 1.75rem;
+            background-color: white;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+      .Contact-mail{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: start;
+        align-items: center;
+        gap: .875rem;
+      .Mail-logo{ 
+        width: 1.625rem;
+        min-height: 1.625rem;
+        background-color: white;
+      .Mail-link{}
+    }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 5rem 2rem;
+
+    .Contact-wrapper{
+      gap: 2rem;
+
+      .Contact-title{
+      }
+
+    }
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 4rem 1.25rem;
+
+    .Contact-wrapper{
+      gap: 1.75rem;
+
+      .Contact-title{}
+      .Contact-text{}
+
+      .Contact-info{
+        flex-flow: column nowrap;
+        justify-content: start;
+        align-items: start;
+        gap: 2rem;
+        margin: 0.5rem 0 0 0;
+
+        .Contact-mail{
+        }
+      }
+    }
+    
+  }
+}
