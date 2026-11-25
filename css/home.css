@@ -85,7 +85,7 @@ body {
   font-smooth : always;
   -webkit-font-smoothing : antialiased;
   -moz-osx-font-smoothing : grayscale;
-  background-image: url(/Home/ASSETS/estrellas2.png);
+  background-image: url(/ASSETS/estrellas2.png);
 }
 
 .Header{
@@ -185,7 +185,7 @@ body {
               /* display block en las imagenes porque estas por defecto son inline y si ponemos block se ajusta a la pagina y no a la imagen/contenido */
               object-fit: contain;
             }
-            .Hero-h2{
+            .Hero-h1{
 
             }
         }
