@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="Header">
+        <div class="Header-logo">
+            <img src="ASSETS/RPlogo.png" alt="Logo Rocio Pereira RP">
+        </div>
+        <ul class="Header-menu">
+            <li class="Header-links">About me</li>
+            <li class="Header-links">Projects</li>
+            <li class="Header-links">Contact</li>
+        </ul>
+        <button class="Header-burger">
+            <span class="Header-line"></span>
+            <span class="Header-line"></span>
+            <span class="Header-line"></span>
+            <!-- Metemos span porque no se puede meter un div, dentro de un button solo img, svg o span -->
+        </button>
+    </header>
+    <main>
+        <section class="Hero">
+            <div class="Hero-wrapper">
+                <div class="Hero-Rocio">
+                 <img src="ASSETS/rocioilustration.png" alt="Caricatura Rocio" class="Hero-img">
+                 <h1 class="Hero-h1">Rocío<br>Pereira</h1>
+                </div>
+                <div class="Hero-description">
+                    <span>Frontend developer</span>
+                    <span>UX/UI designer</span>
+                    <span>Experimental AI & Creative tech</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="Aboutme">
+            <div class="Aboutme-wrapper">
+                <button class="Aboutme-button Aboutme-button--left"></button>
+                <!-- no se si es asi como se pone la clase, preguntar a Edu -->
+                <div class="Aboutme-notebook">
+                    <!-- Portada -->
+                    <div class="Notebook-pages">
+                        <div class="Notebook-page">Portada
+                            <img src="" alt="" class="Notebook-img">
+                        </div>
+                        <div class="Notebook-page">Portada
+                            <img src="" alt="" class="Notebook-img">
+                        </div>
+                        
+                    </div>
+                    <!-- Página 1, Presentación y foto -->
+                    <div class="Notebook-pages">
+                        <div class="Notebook-page">Presentación
+                            <img src="" alt="" class="Notebook-img">
+                        </div>
+                        <div class="Notebook-page">Presentación
+                            <img src="" alt="" class="Notebook-img">
+                        </div>
+                    </div>
+                    <!-- Página 2, Educación -->
+                    <div class="Notebook-pages">
+                        <div class="Notebook-page">Educación
+                            <img src="" alt="" class="Notebook-img">
+                        </div>
+                        <div class="Notebook-page">Educación
+                            <img src="" alt="" class="Notebook-img">
+                        </div>
+                    </div>
+                    <!-- Página 3, Stack y algo más -->
+                    <div class="Notebook-pages">
+                        <div class="Notebook-page">Stack
+                            <img src="" alt="" class="Notebook-img">
+                        </div>
+                        <div class="Notebook-page">Stack
+                            <img src="" alt="" class="Notebook-img">
+                        </div>
+                    </div>
+                    <!-- Contraportada y enlace a contactos-->
+                    <div class="Notebook-pages">
+                        <div class="Notebook-page">Contraportada
+                        </div>
+                        <div class="Notebook-page">Contraportada
+                            <img src="" alt="" class="Notebook-img">
+                        </div>
+                        
+                    </div>
+                </div>
+                <button class="Aboutme-button Aboutme-button--right"></button>
+            </div>
+            
+        </section>
+
+        <section class="Projects">
+            <h2 class="Projects-title">Projects.</h2>
+            <div class="Projects-wrapper">
+                <article class="Projects-columns">
+                    <img src="ASSETS/pixar.png" alt="foto preview web Pixar" class="Projects-img">
+                    <h3 class="Projects-h3">Pixar</h2>
+                </article>
+                <article class="Projects-columns">
+                    <img src="ASSETS/stck.png" alt="foto preview web Stockholm14" class="Projects-img">
+                    <h3 class="Projects-h3">Stockholm14</h3>
+                </article>
+            </div>
+        </section>
+
+        <section class="Contact">
+            <div class="Contact-wrapper">
+               <h2 class="Contact-title">Say hello!</h2>
+                <p class="Contact-text">Have a project in mind? <br> Let´s build something together.
+                    <!-- No queria usar br, pero en este no se si se puede hacer al ser todo una frase -->
+                </p>
+                <div class="Contact-info">
+                    <ul class="Contact-socials">
+                        <li class="Socials-links">
+                            <a href="" class="Socials-item">
+                                <img src="" alt="" class="Socials-logo">
+                            </a>
+                        </li>
+                        <li class="Socials-links">
+                            <a href="" class="Socials-item">
+                                <img src="" alt="" class="Socials-logo">
+                            </a>
+                        </li>
+                        <li class="Socials-links">
+                            <a href="" class="Socials-item">
+                                <img src="" alt="" class="Socials-logo">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="Contact-mail">
+                        <img src="" alt="" class="Mail-logo">
+                        <a href="" class="Mail-link">pereiradianezrocio@gmail.com</a>
+                    </div>
+                </div> 
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>

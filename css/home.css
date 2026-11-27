@@ -85,7 +85,7 @@ body {
   font-smooth : always;
   -webkit-font-smoothing : antialiased;
   -moz-osx-font-smoothing : grayscale;
-  background-image: url(/ASSETS/estrellas2.png);
+  background-image: url(/ASSETS/backgroundestrellas.png);
   background-attachment: fixed;
 }
 
