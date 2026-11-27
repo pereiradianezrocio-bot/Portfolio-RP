@@ -86,6 +86,7 @@ body {
   -webkit-font-smoothing : antialiased;
   -moz-osx-font-smoothing : grayscale;
   background-image: url(/ASSETS/estrellas2.png);
+  background-attachment: fixed;
 }
 
 .Header{
@@ -389,7 +390,6 @@ body {
   width: 100%;
   max-width: 75rem;
   min-height: 100dvh;
-  margin: auto;
   padding: 4rem 2rem;
 
   display: flex;
